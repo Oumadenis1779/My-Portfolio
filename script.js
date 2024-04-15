@@ -1,19 +1,22 @@
 
-let tablinks= document.getElementsByClassName("tab-links");
-let tabcontents= document.getElementsByClassName("tab-contents");
+let tablinks = document.getElementsByClassName("tab-links");
+let tabcontents = document.getElementsByClassName("tab-contents");
 
-function opentab(event, tabname){
-  for(tablink of tablinks){
-      tablink.classList.remove("active-link");
-  }
-  for(tabcontent of tabcontents){
-      tabcontent.classList.remove("active-tab");
-  }
-  event.currentTarget.classList.add("active-link");
-  document.getElementById(tabname).classList.add("active-tab");
+for (let i = 0; i < tablinks.length; i++) {
+    tablinks[i].addEventListener("click", function() {
+        let tabname = this.getAttribute("onclick").split("'")[1];
+        for (let j = 0; j < tablinks.length; j++) {
+            tablinks[j].classList.remove("active-link");
+        }
+        for (let j = 0; j < tabcontents.length; j++) {
+            tabcontents[j].classList.remove("active-tab");
+        }
+        this.classList.add("active-link");
+        document.getElementById(tabname.toLowerCase()).classList.add("active-tab");
+    });
 }
 
-let sidemenu = document.getElementById("sidemenu");
+
 
 function openmenu(){
     sidemenu.style.right = "0";

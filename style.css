@@ -3,9 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+
 }
-html{
+
+
+html h1{
     scroll-behavior: smooth;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body{
@@ -15,21 +19,35 @@ body{
 
 #header{
     /* width: 100%;
-    height: 100vh; */
+    height: 100vh; 
     background-image: url(images/devs.png);
     /* background-size: cover; */
     background-position: right;
-    background-color: rgba(24, 78, 24, 0.5);
+    background-color: rgba(3, 3, 3, 0.918);
     /* background-blend-mode: darken; */
      /* Adjust this value to get the desired roundness */
     overflow: hidden; /* Ensures that the rounded corners are applied to the background image as well */
+    height: 100vh;
   }
+
+#header img {
+    border-radius: 50%; /* This will make the image rounded */
+    width: 350px; /* Adjust the width of the image as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures that margin auto works */
+    margin: 0 auto; /* Centers the image horizontally */
+    position: absolute; /* Position the image absolutely */
+    top: 50%; /* Align the top of the image to the middle of the container */
+    right: 180px; /* Adjust the right distance as needed */
+    transform: translateY(-50%); /* Vertically center the image */
+} 
   
 .logo{
     width: 140px;
 }
 .container{
     padding: 10px 10%;
+    
 }
 nav{
     display: flex;
@@ -81,6 +99,7 @@ nav ul li a:hover::after{
 #about{
   padding: 80px 0;
   color: white;
+  height: 100vh;
 }
 .row{
     justify-content:space-between;
@@ -146,6 +165,7 @@ about-col- img{
 
 #services{
     padding: 30px 0;
+    height: 100vh;
 }
 .services-list{
     display: grid;
@@ -186,6 +206,7 @@ about-col- img{
 /*-------portfolio--------*/
 #portfolio{
     padding: 50px 0;
+    height: 100vh;
 }
 .work-list{
     display: grid;
@@ -231,7 +252,7 @@ about-col- img{
     margin-top: 20px;
     text-decoration: none;
     font-size: 18px;
-    color: #ff004f;
+    color: #243a9b;
     line-height: 60px;
     background: #fff;
     width: 60px;
@@ -288,11 +309,11 @@ about-col- img{
     transition: transform 0.5s;
 }
 .social-icons a:hover{
-    color: #ff004f;
+    color: #393a8a;
     transform: translateY(-5px);
 }
 .btn.btn2{
-    background: #ff004f;
+    background: #ac0439;
     display: inline-block;
 }
 .contact-right form{
